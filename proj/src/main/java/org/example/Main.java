@@ -1,6 +1,7 @@
-package com.example;
+package org.example;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     //EX3
@@ -14,7 +15,7 @@ public class Main {
     }
 
     //EX6
-    public static int changeNumnber(int num) {
+    public static int changeNumber(int num) {
         return num+1;
     }
 
@@ -68,16 +69,23 @@ public class Main {
 
     //EX14
     public static void numberType(int num){
-        System.out.format("%s is int", num);
+        System.out.format("%s is int \n", num);
     }
     public static void numberType(float num){
-        System.out.format("%s is float", num);
+        System.out.format("%s is float \n", num);
     }
     public static void numberType(double num){
-        System.out.format("%s is double", num);
+        System.out.format("%s is double \n", num);
     }
 
+
     //EX15
+    static Scanner sc = new Scanner(System.in);
+  //static String str = sc.nextLine();
+/*
+    public static String getScanner() {
+        return str;
+    }*/
 
     //EX16
     public static int randNumArr(int[] numArr){
@@ -86,6 +94,19 @@ public class Main {
     }
 
     //EX17
+    public static void string1 (String someString) {
+        someString += "@@@";
+        string2(someString);
+    }
+    public static void string2 (String someString) {
+        someString += "**";
+        string3(someString);
+
+    }
+    public static void string3 (String someString) {
+        someString += "#";
+        System.out.println(someString);
+    }
 
 
     //EX19
@@ -122,6 +143,12 @@ public class Main {
         }
     }
     //EX21
+    public static void sumNumbers(int number){
+    }
+
+
+
+
 
 
     public static void world(){
@@ -141,8 +168,7 @@ public class Main {
         }
 
         int k = 5;
-        changeNumnber(k);
-        System.out.println(changeNumnber(k));
+        System.out.println(changeNumber(k));
         System.out.println(k);
         //K will stay with his starting value as long as we
         //determine him.
@@ -161,7 +187,7 @@ public class Main {
         //simpleCalc(7, 3, '/');
 
         //EX9
-        System.out.println(sumNum(1, 2, 3));
+      //System.out.println(sumNum(1, 2, 3));
 
         //EX10
         int[] numberArr = {1,2,3};
@@ -179,19 +205,25 @@ public class Main {
         numberType(14);
         numberType(14.2f);
         numberType(14.3d);
+
         //EX15
+        //im pretty sure I didn't do it right just because I put static on everything
+        //System.out.println(getScanner());
 
         //EX16
         int[] numArr = {1,2,3,4,5,6,7,8,9,10};
         System.out.println(randNumArr(numArr));
-
         //EX17
+        String newString = "hello";
+        string1(newString);
 
         //EX19
         printWord(magicWord);
         changeWord("Accio");
         printWord(magicWord);
         //the ward has been changed not only in the function
+
+
 
         //EX20
         int[] arrNum = {2, 6, 7, 8, 34, 16};
@@ -206,6 +238,7 @@ public class Main {
         //EX21
         int num = 524;
         System.out.println((int) Math.floor(num/100));
+
     }
 }
 
@@ -215,11 +248,11 @@ public class Main {
 //The first function is main like the first class
 
 //EX13
-//when our function does the same action but with different type of numbers
+//when our function does the same action but with different type of numbers or variables
 //like double and int
 
 //EX18
 //the difference is when we want to use the variable
 //if we will determine the variable in the global scope we could use it
 //in every function but if we will determine it in a function it wouldn't be
-// accessible in other functions, and we could not change his base value
+//accessible i
