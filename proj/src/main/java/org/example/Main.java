@@ -143,12 +143,14 @@ public class Main {
         }
     }
     //EX21
-    public static void sumNumbers(int number){
+    public static int sumNumbers(int number){
+        int sum = 0;
+        while (number > 0) {
+           sum = sum + number % 10;
+           number = number / 10;
+        }
+        return sum;
     }
-
-
-
-
 
 
     public static void world(){
@@ -157,8 +159,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
+        //EX3
         greet();
 
+        //EX4
         printNum(4);
         System.out.println("\n");
 
@@ -167,6 +171,7 @@ public class Main {
             printNum(i);
         }
 
+        //EX6
         int k = 5;
         System.out.println(changeNumber(k));
         System.out.println(k);
@@ -187,7 +192,7 @@ public class Main {
         //simpleCalc(7, 3, '/');
 
         //EX9
-      //System.out.println(sumNum(1, 2, 3));
+        System.out.println(sumNum(1, 2, 3));
 
         //EX10
         int[] numberArr = {1,2,3};
@@ -213,6 +218,7 @@ public class Main {
         //EX16
         int[] numArr = {1,2,3,4,5,6,7,8,9,10};
         System.out.println(randNumArr(numArr));
+
         //EX17
         String newString = "hello";
         string1(newString);
@@ -236,23 +242,31 @@ public class Main {
         //yes
 
         //EX21
-        int num = 524;
-        System.out.println((int) Math.floor(num/100));
+        System.out.println(sumNumbers(475));
 
     }
 }
 
 //EX1
+//A function is a code that is usually defined by an action we want it to do.
+//we should use a function:
+// first because it often makes our code more organized instead of put everything in one main
+// and big function.  when function is written, it can be called multiple times from within the program and reduce
+// time to repeat ourselves in the code
+// And second functions reduce code redundancy, functions allow us to make the change in one place and have that change
+// take effect every time the function is called
+
 
 //EX2
 //The first function is main like the first class
 
 //EX13
 //when our function does the same action but with different type of numbers or variables
+//like overloading
 //like double and int
 
 //EX18
 //the difference is when we want to use the variable
-//if we will determine the variable in the global scope we could use it
-//in every function but if we will determine it in a function it wouldn't be
-//accessible i
+//if we will determine the variable in the local scope the other functions cant get access to the information in it
+//and only the function that the variable int it could modify it and change it
+//if we determine it in the global all the functions will be able to use it
